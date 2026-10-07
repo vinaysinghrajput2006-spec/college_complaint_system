@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body>
+
+    <h1>Student Registration</h1>
+
+    <form action="/register" method="POST">
+        <label> Student Name :</label>
+        <input type="text" name="student_name" required>
+        <br><br>
+
+        <label>Roll Number</label>
+        <input type="text" name="roll_number" required>
+        <br><br>
+
+        <label>Email</label>
+        <input type="text" name="email" required>
+        <br><br>
+
+        <label>Department</label>
+        <select name="department" required>
+            <option value="">Select Department</option>
+            <option value="BCA">BCA</option>
+            <option value="MCA">MCA</option>
+            <option value="BBA">BBA</option>
+            <option value="B.TECH">B.TECH</option>
+            <option value="MBA">MBA</option>
+        </select>
+        <br><br>
+
+
+        <label>Password:</label>
+        <input type="password" name="password" required>
+        <br><br>
+
+        <label>Confirm Password</label>
+        <input type="password" name="comfirm_password" required>
+        <br><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p>
+        Already resgister?
+        <a href="/login">Login</a>
+    </p>
+    
+</body>
+</html>

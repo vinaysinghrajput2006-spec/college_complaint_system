@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Complaints</title>
+    
+</head>
+
+<body>
+
+<h1>My Complaints</h1>
+
+<a href="{{url_for('student_dashboard')}}">
+    Back To Dashboard
+</a>
+
+<br><br>
+
+{%if complaints%}
+
+<table border="1" cellpadding="10">
+
+    <tr>
+
+        <th>Complaint ID</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+
+    {% for complaint in complaints %}
+
+    <tr>
+
+        <td>{{complaint[0]}}</td>
+        <td>{{complaint[1]}}</td>
+        <td>{{complaint[2]}}</td>
+        <td>{{complaint[4]}}</td>
+        <td>{{complaint[3]}}</td>
+
+    </tr>
+
+    {%endfor%}
+</table>
+
+{%else%}
+
+<p>You have not submitted any complaints yet.</p>
+{%endif%}
+
+<br><br>
+
+<a href="{{url_for('student_logout')}}" class="logout">
+    Logout
+</a>
+
+
+</body>
+</html>
