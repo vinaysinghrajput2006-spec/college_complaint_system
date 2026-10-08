@@ -94,7 +94,7 @@ Check PostgreSQL:
 psql --version
 📥 Installation
 1. Clone the repository
-git clone https://github.com/https://github.com/vinaysinghrajput2006-spec/college_complaint_system.git
+git clone https://github.com/vinaysinghrajput2006-spec/college_complaint_system.git
 
 Move into the project directory:
 
