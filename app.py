@@ -174,8 +174,19 @@ def admin_dashboard():
     cur=conn.cursor()
 
     cur.execute(
-        """select complaint_id,student_name,roll_number,department,category,description,status,created_at 
-        from complaints order by complaint_id asc"""
+        """select 
+        c.complaint_id,
+        s.student_name,
+        s.roll_number,
+        s.department,
+        c.category,
+        c.description,
+        c.status,
+        c.created_at from complaints c
+        join student s
+        on c.student_id=s.student_id
+        order by c.created_at desc"""
+     
     )
 
     complaints=cur.fetchall()
